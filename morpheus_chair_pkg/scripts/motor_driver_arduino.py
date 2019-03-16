@@ -13,18 +13,7 @@ class MotorDriver(object):
         :param wheel_distance: Distance Between wheels in meters
         :param wheel_diameter: Diameter of the wheels in meters
         """
-        # self.PIN = 18
-        # self.PWMA1 = 6
-        # self.PWMA2 = 13
-        # self.PWMB1 = 20
-        # self.PWMB2 = 21
-        # self.D1 = 12
-        # self.D2 = 26
         self.ENB = 5
-        # self.IN1 = 7
-        # self.IN2 = 8
-        # self.IN3 = 11
-        # self.IN4 = 9
         self.ENA = 6
 
         self.PWM1 = 0
