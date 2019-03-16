@@ -103,9 +103,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES morpheus_chair_pkg
-#  CATKIN_DEPENDS geometry_msgs rospy
-#  DEPENDS system_lib
+  LIBRARIES morpheus_chair_pkg
+  CATKIN_DEPENDS geometry_msgs rospy
+  DEPENDS system_lib
 )
 
 ###########

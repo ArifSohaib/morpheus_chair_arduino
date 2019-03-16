@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from geometry_msgs.msg import Twist
-from motor_driver import MotorDriver
+from motor_driver_arduino import MotorDriver
 from std_srvs.srv import Empty, EmptyRequest
 
 class RobotMover(object):
