@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+        <node name="save_data"
+            pkg="morpheus_chair_pkg"
+            type="command_saver.py"
+            respawn="false" output="screen">
+        </node>
+</launch>
