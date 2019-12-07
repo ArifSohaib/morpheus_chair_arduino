@@ -4,6 +4,8 @@ from geometry_msgs.msg import Twist
 from motor_driver_arduino import MotorDriver
 from std_srvs.srv import Empty, EmptyRequest
 import os
+from os.path import expanduser
+from datetime import datetime
 class RobotMover(object):
 
     def __init__(self):
@@ -22,13 +24,13 @@ class RobotMover(object):
         angular_speed = msg.angular.z
 
         # Save Values
-        file_name = "/home/nvidia/catkin_ws/saved_data/cmd_vel_files.json"
+        file_name = expanduser("~") + "/saved_data/cmd_vel_files.json"
         if os.path.isfile(file_name):
                 f = open(file_name,'a+')
         else:
             f = open(file_name,'w+')
         #not using Python 3.6 format due to compatibility reasons
-        f.write("{\"linear\":" + str(linear_speed) + ", \"angular\":" + str(angular_speed) + "},\n")
+        f.write("{\"time\":" + "\"" + str(datetime.now()) + "\"" + ", \"linear\":" + str(linear_speed) + ", \"angular\":" + str(angular_speed) + "},\n")
     
     def listener(self):
         rospy.spin()

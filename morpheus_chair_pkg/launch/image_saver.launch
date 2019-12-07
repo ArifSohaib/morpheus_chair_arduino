@@ -2,7 +2,7 @@
 <launch>
         <node name="save_images"
             pkg="morpheus_chair_pkg"
-            type="command_saver.py"
+            type="image_saver.py"
             respawn="false" output="screen">
         </node>
 </launch>
